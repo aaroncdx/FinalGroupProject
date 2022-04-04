@@ -10,6 +10,8 @@
 
 **Introduction**
 
+This is a Sport Booking System where user able to book court via Mobile Application.
+
 **Value Creation**
 
 **Problem Statement**
