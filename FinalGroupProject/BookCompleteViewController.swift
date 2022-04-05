@@ -18,7 +18,7 @@ class BookCompleteViewController: UIViewController {
   
     @IBAction func CompleteTapped(_ sender: Any) {
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         let nc = UINavigationController(rootViewController: vc)
         nc.modalPresentationStyle = .fullScreen
         

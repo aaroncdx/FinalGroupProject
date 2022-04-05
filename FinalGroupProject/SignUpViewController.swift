@@ -34,13 +34,46 @@ class SignUpViewController: UIViewController {
 
     @IBAction func RegisterTapped(_ sender: Any) {
         
-        //database here
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        let nc = UINavigationController(rootViewController: vc)
-        nc.modalPresentationStyle = .fullScreen
         
-        self.present(nc, animated: true, completion: nil)
+        if(UsernameTextField.text == "" || PasswordTextField.text == "" || RepasswordTextField.text == ""){
+            print("Error")
+            self.Errormessage.isHidden = false
+            self.Errormessage.text = "Please ensure you have filled all the forms"
+        }
+        else{
+            
+            self.ref?.child("ID").child(self.UsernameTextField.text ?? "Wrong").child("password").observe(.value, with: {(snapshot) in
+                
+                if(snapshot.value as? String ?? "Wrong" != "Wrong"){
+                    print(snapshot.value ?? "")
+                    self.Errormessage.isHidden = false
+                    self.Errormessage.text = "Username already existed"
+                }
+                else if(self.PasswordTextField.text != self.RepasswordTextField.text){
+                    print("2")
+                    self.Errormessage.isHidden = false
+                    self.Errormessage.text = "Please ensure Password and Re-password are same"
+                }
+                else{
+                    self.Errormessage.isHidden = true
+                    self.ref?.child("ID").child(self.UsernameTextField.text ?? "").child("password").setValue(self.PasswordTextField.text ?? "")
+            
+                    self.navigationController?.popViewController(animated: true)
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                    let nc = UINavigationController(rootViewController: vc)
+                    nc.modalPresentationStyle = .fullScreen
+                    
+                    self.present(nc, animated: true, completion: nil)
+                }
+            })
+
+            
+
+        }
+        
+        
+        
     }
     
     @IBAction func BackTapped(_ sender: Any) {

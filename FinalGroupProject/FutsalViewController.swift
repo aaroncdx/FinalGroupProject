@@ -8,9 +8,11 @@
 import UIKit
 import MapKit
 
+
 class FutsalViewController: UIViewController {
     
     
+    @IBOutlet weak var priceTF: UILabel!
     
     @IBOutlet weak var map: MKMapView!
     
@@ -43,7 +45,7 @@ class FutsalViewController: UIViewController {
         vc.dataUsername = dataUsername
         vc.Location = Location
         vc.subTitle = subTitle
-        vc.priceperhour = price
+        vc.dataPrice = Double(priceTF.text ?? "") ?? 0
         
         
         self.present(nc, animated: true, completion: nil)

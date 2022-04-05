@@ -32,14 +32,31 @@ class LoginViewController: UIViewController {
 
     @IBAction func LoginTapped(_ sender: Any) {
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        let nc = UINavigationController(rootViewController: vc)
-        nc.modalPresentationStyle = .fullScreen
-        vc.dataUsername = self.UsernameTextField.text!
         
-        self.present(nc, animated: true, completion: nil)
-        
+        if (UsernameTextField.text == "" || PasswordTextField.text == ""){
+            self.ErrorMessage.isHidden = false
+            self.ErrorMessage.text = "Please enter your username and password"
+        }
+        else{
+        self.ref?.child("ID").child(UsernameTextField.text ?? "Wrong").child("password").observe(.value, with: {(snapshot) in
+            if(snapshot.value as? String ?? "Wrong" != self.PasswordTextField.text){
+                self.ErrorMessage.isHidden = false
+                self.ErrorMessage.text = "Your username or password is wrong"
+            }
+            else{
+                self.ErrorMessage.isHidden = true
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+                let nc = UINavigationController(rootViewController: vc)
+                nc.modalPresentationStyle = .fullScreen
+                vc.dataUsername = self.UsernameTextField.text!
+                
+                self.present(nc, animated: true, completion: nil)
+
+            }
+        })
     }
+        
+    }//end of logintapped()
     
     @IBAction func SignUpTapped(_ sender: Any) {
         

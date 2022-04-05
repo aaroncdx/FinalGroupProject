@@ -10,12 +10,19 @@ import MapKit
 
 class BadmintonViewController: UIViewController {
 
+    @IBOutlet weak var priceTF: UILabel!
     @IBOutlet weak var map: MKMapView!
+    
+    
+    
+    
+    
+    
     
     //long and lat of ucsi university
     //3.0800° N, 101.7335° E
     var dataUsername:String = ""
-    var Location:String = "Pro one badminton"
+    var Location:String = "Pro One Badminton"
     var subTitle:String = "Badminton"
     var price:String = "12"
     
@@ -47,7 +54,7 @@ class BadmintonViewController: UIViewController {
         vc.dataUsername = dataUsername
         vc.Location = Location
         vc.subTitle = subTitle
-        vc.priceperhour = price
+        vc.dataPrice = Double(priceTF.text ?? "") ?? 0
         
         
         self.present(nc, animated: true, completion: nil)

@@ -10,6 +10,7 @@ import MapKit
 
 class BasketballViewController: UIViewController {
 
+    @IBOutlet weak var priceTF: UILabel!
     @IBOutlet weak var map: MKMapView!
     
     var dataUsername:String = ""
@@ -43,7 +44,7 @@ class BasketballViewController: UIViewController {
         vc.dataUsername = dataUsername
         vc.Location = Location
         vc.subTitle = subTitle
-        vc.priceperhour = price
+        vc.dataPrice = Double(priceTF.text ?? "") ?? 0
         
         
         self.present(nc, animated: true, completion: nil)
