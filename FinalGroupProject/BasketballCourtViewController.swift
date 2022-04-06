@@ -104,7 +104,7 @@ class BasketballCourtViewController: UIViewController, UIPickerViewDelegate, UIP
             
         }
         else {
-        
+            refreshtapped = 1
             prompt.isHidden = true
         
         court1.backgroundColor = UIColor.white

@@ -68,9 +68,15 @@ class BookViewController: UIViewController {
         
         dateTF.inputView = datePicker
         dateTF.text = formateDate(date: Date())
+        
+        let tap = UITapGestureRecognizer(target: self,action:#selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
-
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
     
     @IBAction func PaynowTapped(_ sender: Any) {
         

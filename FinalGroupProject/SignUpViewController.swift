@@ -28,9 +28,16 @@ class SignUpViewController: UIViewController {
 
         ref = Database.database().reference()
         loginBtn.layer.cornerRadius = 30
+        
+        let tap = UITapGestureRecognizer(target: self,action:#selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
        
     }
     
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
 
     @IBAction func RegisterTapped(_ sender: Any) {
         

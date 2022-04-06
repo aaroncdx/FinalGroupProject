@@ -111,7 +111,7 @@ class FutsalCourtViewController: UIViewController, UIPickerViewDelegate, UIPicke
             
         }
         else {
-        
+            refreshtapped = 1
             prompt.isHidden = true
         
         court1.backgroundColor = UIColor.white
