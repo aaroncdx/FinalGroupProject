@@ -1,7 +1,7 @@
 
 # BIC 2333 Mobile Programing IOS ( Group Project )
 
-## ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg) "Logo Title Text 2"Sport Court Booking Mobile Application System.
+## ![This is an image](https://github.com/aaroncdx/FinalGroupProject/blob/main/FinalGroupProject/Assets.xcassets/AppIcon.appiconset/logo2-20%403x.png)     Sport Court Booking Mobile Application System.
 
 **Group Members**
 1) Ong Zhe Chee (1002060962)
