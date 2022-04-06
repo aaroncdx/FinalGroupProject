@@ -171,15 +171,15 @@ class BadmintonCourtViewController: UIViewController, UIPickerViewDelegate, UIPi
         maxValue = minValue + duration
 
         for i in minValue...maxValue{
-            
             if(i <= 11){
                 timeValue = list[i]
                 for j in 0...5{
+
                     self.ref?.child("Court").child(Location).child(dataDate).child(timeValue).child("CourtBooked").child(String(j)).observe(.value, with: {(snapshot) in
                         
                         if(snapshot.value as? String ?? "" != ""){
                             self.booked.append(snapshot.value as? String ?? "")
-                            
+
                             if (self.booked[j] == "1"){
                                 self.court1.backgroundColor = UIColor.systemBlue
                                 self.court1.isEnabled = false
