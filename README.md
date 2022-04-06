@@ -23,9 +23,17 @@ As we introduce this sport Court booking mobile application was to cater those u
 
 > **Features and Functionality**
 
-- Multiple options of sport and sport location to choose with 
-- All details regarding to the particular sport location
-- Able to choose the date/time user want
-- Make payment on the application
+- Multiple options of sport and court renting services to choose.
+- All details regarding to the particular court renting services (location, price, description, etc).
+- Able to choose the date/time user want.
+- calculate the price for user depand on the duration user options.
+- A clear view of user booking status provided.
+- Make payment on the application.
 
-**Conclusion**
+> **Conclusion**
+
+This sport court booking application system able to bring changes towards user and business point of view. in the future developing will bring more vendors and more different kind of sports into this application as well as extend the scope from only one state to multiple state in malaysia.
+
+> **Reference**
+
+
