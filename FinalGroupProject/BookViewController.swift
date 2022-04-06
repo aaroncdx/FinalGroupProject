@@ -74,7 +74,7 @@ class BookViewController: UIViewController {
     
     @IBAction func PaynowTapped(_ sender: Any) {
         
-        if(courttapped == 1){
+        if(courttapped == 1 ){
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SummaryViewController") as! SummaryViewController
         let nc = UINavigationController(rootViewController: vc)

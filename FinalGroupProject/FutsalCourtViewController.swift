@@ -56,6 +56,8 @@ class FutsalCourtViewController: UIViewController, UIPickerViewDelegate, UIPicke
     var duration:Int = 0
     var stop:Int = 0
     
+    var refreshtapped:Int = 0 //for error message
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,6 +71,7 @@ class FutsalCourtViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     @IBAction func SelectCourtTapped(_ sender: Any) {
         
+        if(refreshtapped == 1){
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "BookViewController") as! BookViewController
         let nc = UINavigationController(rootViewController: vc)
         nc.modalPresentationStyle = .fullScreen
@@ -84,18 +87,32 @@ class FutsalCourtViewController: UIViewController, UIPickerViewDelegate, UIPicke
         vc.dataSelect2 = select2
         vc.dataNum = num
         vc.booked = booked
+        vc.courttapped = 1 //for error message
         
         self.present(nc, animated: true, completion: nil)
-        
+        }
+        else{
+            prompt.isHidden = false
+            prompt.text = "Please first do refreah on the latest status"
+        }
     }
     
     @IBAction func RefreshTapped(_ sender: Any) {
         
-        if (timeTF.text == "" && durationTF.text == ""){
+        if (timeTF.text == ""){
+
             prompt.isHidden = false
+            prompt.text = "Please do select the time for your booking"
+            
+        }
+        else if(durationTF.text == ""){
+            prompt.isHidden = false
+            prompt.text = "Please do select the duration for your booking"
             
         }
         else {
+        
+            prompt.isHidden = true
         
         court1.backgroundColor = UIColor.white
         court1.isEnabled = true
