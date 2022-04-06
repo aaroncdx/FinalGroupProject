@@ -1,7 +1,7 @@
 
 # BIC 2333 Mobile Programing IOS ( Group Project )
 
-## Sport Court Booking Mobile Application System.
+## ![This is an image](https://github.com/aaroncdx/FinalGroupProject/blob/main/FinalGroupProject/Assets.xcassets/AppIcon.appiconset/logo2-20%403x.png)     Sport Court Booking Mobile Application System.
 
 **Group Members**
 1) Ong Zhe Chee (1002060962)
@@ -23,9 +23,36 @@ As we introduce this sport Court booking mobile application was to cater those u
 
 > **Features and Functionality**
 
-- Multiple options of sport and sport location to choose with 
-- All details regarding to the particular sport location
-- Able to choose the date/time user want
-- Make payment on the application
+- Multiple options of sport and court renting services to choose.
+- All details regarding to the particular court renting services (location, price, description, etc).
+- Able to choose the date/time user want.
+- calculate the price for user depand on the duration user options.
+- A clear view of user booking status provided.
+- Make payment on the application.
 
-**Conclusion**
+> **Conclusion**
+
+This sport court booking application system able to bring changes towards user and business point of view. in the future developing will bring more vendors and more different kind of sports into this application as well as extend the scope from only one state to multiple state in malaysia.
+
+> **Reference**
+
+1. Picker View (https://www.youtube.com/watch?v=SfjZwgxlwcc)
+2. Navigation and Passing Data (https://www.appypie.com/pass-data-between-view-controllers-swift-how-to)
+3. Scroll View (https://www.youtube.com/watch?v=orONrVT6CAg&t=226s)
+4. Date Picker View (https://www.youtube.com/watch?v=fhRJ5HQjBIE)
+5. Firebase Setup (https://www.youtube.com/watch?v=tpsffoRh9u0&t=1174s)
+6. Firebase Real-Time Database CRUD (https://www.youtube.com/watch?v=UCG_ai83XX0&t=1472s)
+7. Firebase Real-Time Database Connection (https://www.youtube.com/watch?v=kT-NvuiSUp4&t=1s)
+8. Firebase install SDK (https://firebase.google.com/docs/auth/ios/start)
+9. Cloud storage for Firebase (https://firebase.google.com/docs/storage)
+10. Firebase realtime documentation (https://firebase.google.com/docs/database/ios/start)
+11. Getting Array Data from Firebase (https://stackoverflow.com/questions/48664725/how-to-get-array-data-when-using-firebase-realtime-database-in-swift)
+12. Remove Last Value from Array (https://stackoverflow.com/questions/24051633/how-to-remove-an-element-from-an-array-in-swift)
+13. Auto Closing the Picker View (https://stackoverflow.com/questions/41007550/datepicker-not-closing-after-tap-outside)
+14. Getting Specific Value from Database (https://stackoverflow.com/questions/42256523/swift-get-specific-value-from-firebase-database)
+15. Resolve Problem when converting an unconfirmable type of value (https://stackoverflow.com/questions/61984546/how-can-i-convert-a-string-in-a-textfield-to-an-int-in-swift)
+16. Homebrew installation (https://brew.sh/)
+17. Cocoapods installation (https://formulae.brew.sh/formula/cocoapods)
+
+
+
